@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      DivisApp 22006988
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">DivisApp - Dólares a Quetzales</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label position="floating">Cantidad en Dólares</ion-label>
+    <ion-input [(ngModel)]="cantidadDolares" type="number"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="convertirAQuetzales()">Convertir a Quetzales</ion-button>
+
+  <ion-item *ngIf="equivalenteQuetzales !== undefined">
+    <ion-label position="floating">Equivalente en Quetzales</ion-label>
+    <ion-input [value]="equivalenteQuetzales.toFixed(2)" disabled></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="errorMensaje">
+    <ion-label color="danger">{{ errorMensaje }}</ion-label>
+  </ion-item>
+</ion-content>
