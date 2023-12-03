@@ -1,0 +1,7 @@
+{
+  "name": "AppBird",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
